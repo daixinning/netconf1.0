@@ -1,0 +1,18 @@
+<device>
+  <name>NETCONF-server</name>
+  <data-models>
+    <model>
+      <path>/usr/local/etc/netopeer/schema/ietf-x509-cert-to-name.yin</path>
+    </model>
+    <model-main>
+      <path>/usr/local/etc/netopeer/schema/ietf-netconf-server.yin</path>
+      <feature>ssh</feature>
+      <feature>inbound-ssh</feature>
+      <feature>outbound-ssh</feature>
+    </model-main>
+  </data-models>
+  <repo>
+    <type>file</type>
+    <path>/usr/local/etc/netopeer/datastore/ietf-netconf-server.xml</path>
+  </repo>
+</device>
