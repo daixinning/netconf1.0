@@ -45,13 +45,13 @@ build:
 	@[ -d $(objects_dir) ] || (mkdir -p $(objects_dir))
 	@$(foreach dir, $(subsystem_dir), \
 		echo "Begin to build $(dir)"; \
-		make -k --no-print-directory -C $(dir) && echo;)
+		make -s -k -C $(dir) && echo;)
 	@echo "<<< Build finished! >>>\n"
 
 clean:
 	@$(foreach dir, $(subsystem_dir), \
 		echo "Begin to clean $(dir)"; \
-		make -k --no-print-directory -C $(dir) clean && echo;)
+		make -s -k -C $(dir) clean && echo;)
 	@!([ -d $(objects_dir) ]) || (rmdir $(objects_dir))
 	@!([ -d $(release_dir) ]) || (rmdir $(release_dir))
 	@echo "<<< Clean finished! >>>\n"
